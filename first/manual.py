@@ -45,12 +45,12 @@ def lightsOff(light):
 
 def goForward(time=None, speed=None):
     if time is None:
-        time = 1000
+        time = 100
     if speed is None:
         speed = 150
-    lightsOn(FRONT_LIGHTS, 0)
+    #lightsOn(FRONT_LIGHTS, 0)
     sendCommand(getCommand("drive", [1, speed, time]))
-    lightsOff(FRONT_LIGHTS)
+    #lightsOff(FRONT_LIGHTS)
 
 def goBackward(time=None, speed=None):
     if time is None:
@@ -61,21 +61,21 @@ def goBackward(time=None, speed=None):
 
 def turnRight(time=None, speed=None):
     if time is None:
-        time = 1000
+        time = 100
     if speed is None:
-        speed = 150
-    lightsOn(RIGHT_LIGHT, 100)
+        speed = 100
+    #lightsOn(RIGHT_LIGHT, 100)
     sendCommand(getCommand("drive", [3, speed, time]))
-    lightsOff(RIGHT_LIGHT)
+    #lightsOff(RIGHT_LIGHT)
 
 def turnLeft(time=None, speed=None):
     if time is None:
-        time = 1000
+        time = 100
     if speed is None:
-        speed = 150
-    lightsOn(LEFT_LIGHT, 100)
+        speed = 100
+    #lightsOn(LEFT_LIGHT, 100)
     sendCommand(getCommand("drive", [4, speed, time]))
-    lightsOff(LEFT_LIGHT)
+    #lightsOff(LEFT_LIGHT)
 
 
 def allLightsOff():
